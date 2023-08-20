@@ -9,3 +9,8 @@
     width: 150px; /* Rozmiar 50 pikseli */
     height: 150px; /* Rozmiar 50 pikseli */
 }
+
+.instagramSubtitles {
+    display: flex;
+    align-items: center;
+}
