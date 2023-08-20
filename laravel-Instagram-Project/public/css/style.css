@@ -1,0 +1,5 @@
+.instagramLogo {
+    display: flex;
+    align-items: center; /* Centruj zawartość w pionie */
+    /* Dodatkowe style, jeśli są potrzebne */
+}
