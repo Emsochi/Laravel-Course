@@ -3,3 +3,9 @@
     align-items: center; /* Centruj zawartość w pionie */
     /* Dodatkowe style, jeśli są potrzebne */
 }
+
+.logoPhoto {
+    border-radius: 50%; /* Zaokrąglenie krawędzi */
+    width: 150px; /* Rozmiar 50 pikseli */
+    height: 150px; /* Rozmiar 50 pikseli */
+}
