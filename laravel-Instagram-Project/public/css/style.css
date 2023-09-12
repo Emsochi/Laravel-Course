@@ -1,16 +1,37 @@
 .instagramLogo {
     display: flex;
-    align-items: center; /* Centruj zawartość w pionie */
-    /* Dodatkowe style, jeśli są potrzebne */
+    align-items: center; 
+    font-size: 24px;
+    font-weight:bold;
 }
 
 .logoPhoto {
-    border-radius: 50%; /* Zaokrąglenie krawędzi */
-    width: 150px; /* Rozmiar 50 pikseli */
-    height: 150px; /* Rozmiar 50 pikseli */
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px; 
 }
 
 .instagramSubtitles {
     display: flex;
     align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.logoContainer,
+.titleContainer {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.logoPhoto {
+    max-width: 100%;
+}
+
+body {
+    background-color: #fff;
 }
