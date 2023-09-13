@@ -19,7 +19,7 @@
 .row {
     display: flex;
     justify-content:center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .logoContainer,
@@ -30,8 +30,4 @@
 
 .logoPhoto {
     max-width: 100%;
-}
-
-body {
-    background-color: #fff;
 }
