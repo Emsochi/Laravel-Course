@@ -11,6 +11,7 @@
 <x-app-layout>
 
     <body>
+        <div class="mx-40 px-20 pt-30">
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="row">
@@ -46,17 +47,41 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="https://images.pexels.com/photos/5700184/pexels-photo-5700184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Kodowanie">
+        <div class="row pt-4 ">
+            <div class="col-4 ">
+                <img src="https://images.pexels.com/photos/4385547/pexels-photo-4385547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Coding" class= "w-100">
             </div>
             <div class="col-4">
-                <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Zdjęcie laptopa">
+                <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Laptop photo" class="w-100" >
             </div>
             <div class="col-4">
-                <img src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Zdjęcie z kartką">
+                <img src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Photo with card" class="w-100">
+            </div>
+            <div class="row pt-4 ">
+                <div class="col-4 ">
+                    <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Phone and laptop" class= "w-100">
+                </div>
+                <div class="col-4">
+                    <img src="https://images.pexels.com/photos/1181325/pexels-photo-1181325.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Women in jacket " class="w-100" >
+                </div>
+                <div class="col-4">
+                    <img src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Macbook support" class="w-100">
+                </div>
+            </div>
+            <div class="row pt-4 ">
+                <div class="col-4 ">
+                    <img src="https://images.pexels.com/photos/270488/pexels-photo-270488.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Clean Code" class= "w-100">
+                </div>
+                <div class="col-4">
+                    <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Women coding " class="w-100" >
+                </div>
+                <div class="col-4">
+                    <img src="https://images.pexels.com/photos/1181373/pexels-photo-1181373.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Free use" class="w-100">
+                </div>
             </div>
         </div>
+
+        <div>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
