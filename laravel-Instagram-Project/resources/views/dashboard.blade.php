@@ -29,7 +29,7 @@
                             <div class="titleContainer">
 
                                 <div class="instagramLogo">
-                                    <h1>Instagram</h1>
+                                    <h1>Esochi</h1>
                                 </div>
                                 <div class="instagramSubtitles">
                                     <div class="pr-4"><strong>153</strong> posts</div>
