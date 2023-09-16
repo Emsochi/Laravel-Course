@@ -31,3 +31,11 @@
 .logoPhoto {
     max-width: 100%;
 }
+
+.layoutStyle {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+}
