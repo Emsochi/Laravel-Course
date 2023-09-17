@@ -13,18 +13,16 @@
             <div class="flex items-center"> <!-- Zmiana: Dodanie klasy "items-center" do centrowania zawartości w pionie -->
                 <!-- Logo -->
                 <div class="intagramLogo flex items-center"> <!-- Dodanie klasy "flex" i "items-center" -->
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('instagram') }}">
                         <div><img src="/svg/intagramLogo.svg" style="height: 20px; border-right: 1px solid #333;" class="pr-3"></div>
                     </a>
-                    <div class="pageName">
-                        <a href="{{ route('dashboard') }}" class="pl-3">Intagram</a>
-                    </div>
+                    
                 </div>
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                <div>
+                    <a href="{{ route('instagram') }}" class="nav-link">
+                        {{ __('Instagram') }}
+                    </a>
                 </div>
             </div>
 
@@ -71,8 +69,8 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('instagram')" :active="request()->routeIs('instagram')">
+                {{ __('Instagram') }}
             </x-responsive-nav-link>
         </div>
         <!-- Responsive Settings Options -->
