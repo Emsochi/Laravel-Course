@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html>
-
 
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -28,7 +28,7 @@
                             <div class="titleContainer">
 
                                 <div class="instagramLogo">
-                                    <h1>Esochi</h1>
+                                    <div>{{ Auth::user()->user_name }}</div>
                                 </div>
                                 <div class="instagramSubtitles">
                                     <div class="pr-4"><strong>153</strong> posts</div>
@@ -93,3 +93,4 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </x-app-layout>
+
