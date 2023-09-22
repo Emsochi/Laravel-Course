@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -28,18 +27,17 @@
                             <div class="titleContainer">
 
                                 <div class="instagramLogo">
-                                    <div>{{ Auth::user()->user_name }}</div>
+                                    <div>{{ $user->user_name }}</div>
                                 </div>
                                 <div class="instagramSubtitles">
                                     <div class="pr-4"><strong>153</strong> posts</div>
                                     <div class="pr-4"><strong>23k</strong> followers</div>
                                     <div class="pr-4"><strong>212</strong> following</div>
+                </div>
+                                <div class="pt-4 font-weight-bold">{{$user->profiles->title}}</div>
+                                <div> {{$user->profiles->description}}
                                 </div>
-                                <div class="pt-4 font-weight-bold">freeCodeCamp.org</div>
-                                <div> We're a global community of millions of people learning to code together.
-                                    LearnToCodeRPG: https://www.freecodecamp.org/news/learn-to-code-rpg/
-                                </div>
-                                <div><a href="#"> www.freecodecamp.org</a></div>
+                                <div><a href="#"> {{$user->profiles->url }}</a></div>
                             </div>
                         </div>
 
@@ -93,4 +91,3 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </x-app-layout>
-
