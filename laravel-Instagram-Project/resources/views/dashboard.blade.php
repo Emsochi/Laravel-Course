@@ -7,44 +7,32 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <x-app-layout>
-
     <body>
-        <div class="layoutStyle">
-            <div class="py-12">
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div class="row">
-
-                        <div class="col-3 pt-5">
-                            <div class="logoContainer">
-
-                                <img src="https://yt3.googleusercontent.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s900-c-k-c0x00ffffff-no-rj"
-                                    class="logoPhoto ">
-                            </div>
-                        </div>
-
-
-                        <div class="col-9 pt-5">
-                            <div class="titleContainer">
-
-                                <div class="instagramLogo">
-                                    <div>{{ $user->user_name }}</div>
-                                </div>
-                                <div class="instagramSubtitles">
-                                    <div class="pr-4"><strong>153</strong> posts</div>
-                                    <div class="pr-4"><strong>23k</strong> followers</div>
-                                    <div class="pr-4"><strong>212</strong> following</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 pt-5">
+                    <img src="https://yt3.googleusercontent.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s900-c-k-c0x00ffffff-no-rj"
+                        class="logoPhoto ">
                 </div>
-                                <div class="pt-4 font-weight-bold">{{$user->profiles->title}}</div>
-                                <div> {{$user->profiles->description}}
-                                </div>
-                                <div><a href="#"> {{$user->profiles->url }}</a></div>
-                            </div>
+                <div class="col-9 pt-5">
+                    <div class="d-flex justify-content-between">
+                        <div class="font-weight-bold">
+                            <h1>{{ $user->user_name }}</h1>
                         </div>
-
+                        <a href="#">Add new post </a>
                     </div>
+                    <div class="d-flex">
+                        <div class="pr-4"><strong>153</strong> posts</div>
+                        <div class="pr-4"><strong>23k</strong> followers</div>
+                        <div class="pr-4"><strong>212</strong> following</div>
+                    </div>
+                    <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+                    <div> {{ $user->profile->description }}
+                    </div>
+                    <div><a href="#"> {{ $user->profile->url }}</a></div>
                 </div>
             </div>
-            <div class="row pt-4 ">
+            <div class="row pt-5 ">
                 <div class="col-4 ">
                     <img src="https://images.pexels.com/photos/4385547/pexels-photo-4385547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                         alt="Coding" class="w-100">
@@ -86,7 +74,6 @@
                         alt="Free use" class="w-100">
                 </div>
             </div>
-
         </div>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
