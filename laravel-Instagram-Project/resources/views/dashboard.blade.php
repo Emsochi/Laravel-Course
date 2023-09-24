@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -15,7 +13,7 @@
                         class="logoPhoto ">
                 </div>
                 <div class="col-9 pt-5">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-baseline">
                         <div class="font-weight-bold">
                             <h1>{{ $user->user_name }}</h1>
                         </div>
