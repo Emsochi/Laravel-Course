@@ -31,7 +31,12 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/instagram', [InstagramController::class, 'index'])->name('instagram');
-    Route::get('/p', [PostsController::class,'create'])->name('posts.create');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/p/create', [PostsController::class,'create'])->name('posts.create');
+    Route::post('/p', [PostsController::class,'store'])->name('posts.store');
+
 });
 
 
