@@ -21,7 +21,11 @@
                         </div>
                         <div class="form-group row">
                             <label for="caption" class="col-md-4 col-form-label">Post Caption</label>
-                            <input id="caption" type="text" name="caption" class="form-control{{ $errors->has('caption') ? ' is-invalid' : '' }}">
+                            <input 
+                            id="caption" 
+                            type="text" 
+                            name="caption" 
+                            class="form-control{{ $errors->has('caption') ? ' is-invalid' : '' }}">
                             @if ($errors->has('caption'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('caption') }}</strong>
