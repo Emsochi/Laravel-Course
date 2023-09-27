@@ -1,4 +1,3 @@
-
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,7 +16,7 @@
                         <div class="font-weight-bold">
                             <h1>{{ $user->user_name }}</h1>
                         </div>
-                        <a href="#">Add new post </a>
+                        <a href="/p/create">Add new post </a>
                     </div>
                     <div class="d-flex">
                         <div class="pr-4"><strong>153</strong> posts</div>
@@ -31,46 +30,11 @@
                 </div>
             </div>
             <div class="row pt-5 ">
-                <div class="col-4 ">
-                    <img src="https://images.pexels.com/photos/4385547/pexels-photo-4385547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="Coding" class="w-100">
-                </div>
-                <div class="col-4">
-                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="Laptop photo" class="w-100">
-                </div>
-                <div class="col-4">
-                    <img src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="Photo with card" class="w-100">
-                </div>
-            </div>
-            <div class="row pt-4 ">
-                <div class="col-4 ">
-                    <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="Phone and laptop" class="w-100">
-                </div>
-                <div class="col-4">
-                    <img src="https://images.pexels.com/photos/1181325/pexels-photo-1181325.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="Women in jacket " class="w-100">
-                </div>
-                <div class="col-4">
-                    <img src="https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="Macbook support" class="w-100">
-                </div>
-            </div>
-            <div class="row pt-4">
-                <div class="col-4 ">
-                    <img src="https://images.pexels.com/photos/270488/pexels-photo-270488.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="Clean Code" class="w-100">
-                </div>
-                <div class="col-4">
-                    <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="Women coding " class="w-100">
-                </div>
-                <div class="col-4">
-                    <img src="https://images.pexels.com/photos/1181373/pexels-photo-1181373.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        alt="Free use" class="w-100">
-                </div>
+                @foreach ($user->posts as $post)
+                    <div class="col-4">
+                        <img src="/storage/{{ $post->image }}" class="w-100">
+                    </div>
+                @endforeach
             </div>
         </div>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
