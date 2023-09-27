@@ -31,6 +31,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/instagram', [InstagramController::class, 'index'])->name('instagram');
+    Route::get('/instagram/{user}', [InstagramController::class, 'show'])->name('instagram.show');
 });
 
 Route::middleware('auth')->group(function () {
