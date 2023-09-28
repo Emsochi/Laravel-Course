@@ -13,14 +13,14 @@
             <div class="flex items-center"> <!-- Zmiana: Dodanie klasy "items-center" do centrowania zawartości w pionie -->
                 <!-- Logo -->
                 <div class="intagramLogo flex items-center"> <!-- Dodanie klasy "flex" i "items-center" -->
-                    <a href="{{ route('instagram', ['user_name' => Auth::user()->user_name]) }}">
+                    <a href="{{ route('instagram', ['user' => Auth::user()->id]) }}">
                         <div><img src="/svg/intagramLogo.svg" style="height: 20px; border-right: 1px solid #333;" class="pr-3"></div>
                     </a>
                     
                 </div>
                 <!-- Navigation Links -->
                 <div class="pl-3">
-                    <a href="{{ route('instagram', ['user_name' => Auth::user()->user_name]) }}">Instagram</a>
+                    <a href="{{ route('instagram', ['user' => Auth::user()->id]) }}">Instagram</a>
                     </a>
                 </div>
             </div>
