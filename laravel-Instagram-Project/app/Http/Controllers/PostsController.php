@@ -37,4 +37,10 @@ class PostsController extends Controller
         
         return redirect('/instagram/' . auth()->user()->id);
     }
+
+    public function show(\App\Models\Post $post) 
+    {
+        return view('posts.show', compact('post'));
+    }
+    
 }
