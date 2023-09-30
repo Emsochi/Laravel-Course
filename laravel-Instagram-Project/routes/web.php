@@ -32,6 +32,9 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/instagram', [InstagramController::class, 'index'])->name('instagram');
     Route::get('/instagram/{user}', [InstagramController::class, 'show'])->name('instagram.show');
+    Route::get('/instagram/profile/{user}/edit', [InstagramController::class, 'edit'])->name('instagram.edit');
+    Route::patch('/instagram/profile/{user}', [InstagramController::class, 'update'])->name('instagram.update');
+    
 });
 
 Route::middleware('auth')->group(function () {
