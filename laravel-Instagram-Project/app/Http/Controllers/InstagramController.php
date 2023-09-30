@@ -16,12 +16,14 @@ class InstagramController extends Controller
         ]);
     }
 
-    public function show($user)
+    public function show(\App\Models\User $user)
     {
-        $user = User::findOrFail($user);
-        return view('dashboard', [
-            'user' => $user
-        ]);
+        return view('dashboard', compact('user'));
+    }
+
+    public function edit(\App\Models\User $user) 
+    {
+        return view('instagramProfile.editProfile', compact('user'));
     }
 
 }
