@@ -19,6 +19,7 @@
                         </div>
                         <a href="/p/create">Add new post </a>
                     </div>
+                    <a href="/instagram/profile/{{$user->id}}/edit">Edit Profile</a>
                     <div class="d-flex">
                         <div class="pr-4"><strong>{{ $user->posts->count() }}</strong> posts</div>
                         <div class="pr-4"><strong>23k</strong> followers</div>
