@@ -26,4 +26,19 @@ class InstagramController extends Controller
         return view('instagramProfile.editProfile', compact('user'));
     }
 
+    public function update(User $user)
+    {
+        $data = request()->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'url'=>'',
+            'image'=>'',
+        ]);
+        
+        auth()->user()->profile->update($data);
+
+        return redirect("/instagram/{$user->id}");
+    }
+    
+
 }
