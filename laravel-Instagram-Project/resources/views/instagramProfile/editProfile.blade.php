@@ -28,6 +28,7 @@
                             id="title" 
                             type="text" 
                             name="title" 
+                            value="{{ old('title') ?? $user->profile->title}}"
                             class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}">
                             @if ($errors->has('title'))
                                 <span class="invalid-feedback" role="alert">
@@ -42,6 +43,7 @@
                             id="description" 
                             type="text" 
                             name="description" 
+                            value="{{ old('description') ?? $user->profile->description}}"
                             class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}">
                             @if ($errors->has('description'))
                                 <span class="invalid-feedback" role="alert">
@@ -55,6 +57,7 @@
                             id="url" 
                             type="text" 
                             name="url" 
+                            value="{{ old('url') ?? $user->profile->url}}"
                             class="form-control{{ $errors->has('url') ? ' is-invalid' : '' }}">
                             @if ($errors->has('url'))
                                 <span class="invalid-feedback" role="alert">
