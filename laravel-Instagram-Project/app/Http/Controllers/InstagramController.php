@@ -23,6 +23,7 @@ class InstagramController extends Controller
 
     public function edit(\App\Models\User $user) 
     {
+        $this->authorize('update', $user->profile);
         return view('instagramProfile.editProfile', compact('user'));
     }
 
