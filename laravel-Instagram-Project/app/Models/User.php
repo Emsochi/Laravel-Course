@@ -43,6 +43,18 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($user)
+        {
+            $user->profile()->create([
+                    'title'=> $user->user_name,
+            ]);
+            });
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
