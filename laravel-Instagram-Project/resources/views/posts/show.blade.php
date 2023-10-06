@@ -25,11 +25,19 @@
                                     style="max-width: 40px">
                             </div>
                             <div>
-                                <div class="font-weight-bold">{{ $post->user->user_name }}</div>
+                                <div class="font-weight-bold">
+                                    <a href="/instagram/{{ $post->user->id }}">
+                                        <span class="text-dark">{{ $post->user->user_name }}</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <hr>
-                        <p><span class="font-weight-bold">{{ $post->user->user_name }}</span>{{$post->caption}}</p>
+                        <p><span class="font-weight-bold">
+                                <a href="/instagram/{{ $post->user->id }}">
+                                    <span class="text-dark">{{ $post->user->user_name }}</span></a>
+                            </span>{{ $post->caption }}
+                        </p>
                     </div>
                 </div>
             </div>
