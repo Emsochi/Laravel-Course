@@ -29,6 +29,7 @@
                                     <a href="/instagram/{{ $post->user->id }}">
                                         <span class="text-dark">{{ $post->user->user_name }}</span>
                                     </a>
+                                    <a href="#" class="pl-3">Follow</a>
                                 </div>
                             </div>
                         </div>
