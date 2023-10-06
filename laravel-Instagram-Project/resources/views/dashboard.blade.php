@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-3 pt-5">
-                    <img src="https://yt3.googleusercontent.com/ytc/AOPolaTs1IEit9EUooQAJkWS4SkpUE7oMDXYrjIgnOk1Kw=s900-c-k-c0x00ffffff-no-rj"
+                    <img src="/storage/{{$user->profile->image}}" class="rounded-circle w-100"
                         class="logoPhoto ">
                 </div>
                 <div class="col-9 pt-5">
