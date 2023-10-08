@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::post('follow/{user}', [FollowsController::class, 'follow'])->name('users.follow');
+    Route::post('follow/{user}', [FollowsController::class, 'follow'])->name('follow.show');
 });
 
 Route::middleware('auth')->group(function () {

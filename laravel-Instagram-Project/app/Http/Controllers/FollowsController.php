@@ -8,6 +8,6 @@ class FollowsController extends Controller
 {
     public function follow(Request $request, $user)
     {
-        return response()->json(['success' => true]);
+        return auth()->user()->following()->toggle($user->profile);
     }
 }
