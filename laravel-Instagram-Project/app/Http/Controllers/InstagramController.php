@@ -46,12 +46,14 @@ class InstagramController extends Controller
 
         $image= Image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
         $image->save();
+
+        $imageArray = ['image' => $imagePath];
         }
 
         
         auth()->user()->profile->update(array_merge(
             $data,
-            ['image' => $imagePath]
+            $imageArray ?? []
         ));
 
         return redirect("/instagram/{$user->id}");
