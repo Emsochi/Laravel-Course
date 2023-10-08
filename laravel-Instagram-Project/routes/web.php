@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InstagramController;
+use App\Http\Controllers\FollowsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 
@@ -34,16 +35,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/instagram/{user}', [InstagramController::class, 'show'])->name('instagram.show');
     Route::get('/instagram/profile/{user}/edit', [InstagramController::class, 'edit'])->name('instagram.edit');
     Route::patch('/instagram/profile/{user}', [InstagramController::class, 'update'])->name('instagram.update');
-    
+});
+
+Route::middleware('auth')->group(function () {
+    Route::post('follow/{user}', [FollowsController::class, 'follow'])->name('users.follow');
 });
 
 Route::middleware('auth')->group(function () {
     Route::get('/p/create', [PostsController::class,'create'])->name('posts.create');
     Route::post('/p', [PostsController::class,'store'])->name('posts.store');
     Route::get('/p/{post}', [PostsController::class,'show'])->name('posts.show');
-
-
 });
+
+
 
 
 require __DIR__.'/auth.php';
