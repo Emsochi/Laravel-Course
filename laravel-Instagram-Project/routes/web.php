@@ -20,8 +20,7 @@ use App\Http\Controllers\PostsController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
+Route::get('/', [PostsController::class,'index'])->name('posts.index');
 
 
 Route::middleware('auth')->group(function () {
@@ -38,8 +37,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::post('follow/{user}', [FollowsController::class, 'follow'])->name('follow.show');
+    Route::post('follow/{user}', [FollowsController::class, 'store'])->name('follow.store');
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/p/create', [PostsController::class,'create'])->name('posts.create');
