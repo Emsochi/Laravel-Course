@@ -11,10 +11,15 @@ use Auth;
 
 class InstagramController extends Controller
 {
-    public function index()
+    public function index(\App\Models\User $user)
     {
+
+        $follows=(auth()->user()) ? auth()->user()->following->contains($user) :false;
+
+       
         return view('dashboard', [
-            'user' => Auth::user()
+            'user' => Auth::user(),
+            'follows'=>$follows,
         ]);
     }
 
@@ -59,5 +64,4 @@ class InstagramController extends Controller
         return redirect("/instagram/{$user->id}");
     }
     
-
 }
