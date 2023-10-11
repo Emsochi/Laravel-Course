@@ -14,9 +14,13 @@
                 </div>
                 <div class="col-9 pt-5">
                     <div class="d-flex justify-content-between align-items-baseline">
+                        <div class="d-flex align-items-center mb-4">
                         <div class="font-weight-bold">
                             <h1>{{ $user->user_name }}</h1>
                         </div>
+                        <button id="followButton" class="btn btn-primary ml-4">Follow</button>
+                         </div>
+
                         @can('update', $user->profile)
                             <a href="/p/create">Add new post </a>
                         @endcan
@@ -25,9 +29,9 @@
                         <a href="/instagram/profile/{{ $user->id }}/edit">Edit Profile</a>
                     @endcan
                     <div class="d-flex">
-                        <div class="pr-4"><strong>{{ $user->posts->count() }}</strong> posts</div>
-                        <div class="pr-4"><strong>23k</strong> followers</div>
-                        <div class="pr-4"><strong>212</strong> following</div>
+                        <div class="pr-4"><strong>{{ $postCount }}</strong> posts</div>
+                        <div class="pr-4"><strong>{{ $followersCount}}</strong> followers</div>
+                        <div class="pr-4"><strong>{{$followingCount}}</strong> following</div>
                     </div>
                     <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
                     <div> {{ $user->profile->description }}
@@ -46,5 +50,21 @@
             </div>
         </div>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+       <script>
+                $(document).on('click', '#followButton', function() {
+                    $.ajax({
+                        type: 'POST',
+                        url: '{{ route('follow.store', ['user' => $user]) }}',
+                        data: {
+                            "_token": "{{ csrf_token() }}"
+                        },
+                        success: function(response) {
+                            
+                                alert('Obserwujesz teraz tego użytkownika.');
+                            
+                        }
+                    });
+                });
+        </script>     
     </body>
 </x-app-layout>
